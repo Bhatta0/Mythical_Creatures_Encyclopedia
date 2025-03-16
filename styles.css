@@ -1,0 +1,126 @@
+/* Basic color scheme */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+}
+
+/* Global styles */
+body {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
+/* Navbar customization */
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Main content styles */
+main {
+    min-height: 80vh;
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+
+/* Responsive images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Creatures grid styles */
+.creatures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .creatures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .creatures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creatures-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.creature {
+  flex: 1 1 calc(33.33% - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  background-color: white;
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+}
+
+.creature:hover {
+  transform: translateY(-5px);
+}
+
+.creature img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.creature h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 15px 0 15px;
+  text-align: center;
+}
+
+.creature p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #555;
+  padding: 10px 15px 15px 15px;
+  margin: 0;
+}
+
+.creature-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
